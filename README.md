@@ -66,7 +66,7 @@
 
 ## 📫 Connect with Me
 
-* 💼 LinkedIn: *[](https://www.linkedin.com/in/santhosh-kumar-64a203335/)*
+* 💼 LinkedIn: *https://www.linkedin.com/in/santhosh-kumar-64a203335*
 * 📧 Email: *santhosh23200605@gmail.com*
 
 ---
