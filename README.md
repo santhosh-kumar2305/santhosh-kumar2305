@@ -2,7 +2,7 @@
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=0:0d1117,50:1a1f2e,100:00b4d8&height=200&section=header&text=Santhosh%20Kumar%20R%20R&fontSize=50&fontColor=ffffff&fontAlignY=38&desc=AI%20%7C%20Computer%20Vision%20%7C%20Deep%20Learning&descAlignY=58&descSize=18&animation=fadeIn" width="100%"/>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00B4D8&center=true&vCenter=true&width=600&lines=B.Tech+CSE+%40+SASTRA+University;Computer+Vision+Researcher;2+IEEE+%26+Springer+Publications;Building+AI+for+the+Real+World+🌍)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=1000&color=00B4D8&center=true&vCenter=true&width=600&lines=B.Tech+CSE+%40+SASTRA+University;Computer+Vision+Researcher;IEEE+%26+Springer+Publications;Building+AI+for+the+Real+World+🌍)](https://git.io/typing-svg)
 
 <p>
   <a href="https://www.linkedin.com/in/santhosh-kumar-64a203335">
@@ -13,6 +13,9 @@
   </a>
   <a href="https://www.kaggle.com/santhoshkumarrr">
     <img src="https://img.shields.io/badge/Kaggle-20BEFF?style=for-the-badge&logo=kaggle&logoColor=white" />
+  </a>
+  <a href="https://leetcode.com/u/Santhosh_Kumar_R_R">
+    <img src="https://img.shields.io/badge/LeetCode-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" />
   </a>
 </p>
 
@@ -46,23 +49,26 @@ class SanthoshKumar:
 <table>
   <tr>
     <th>#</th>
-    <th>Paper</th>
+    <th>Title</th>
     <th>Venue</th>
     <th>Method</th>
+    <th>Key Result</th>
     <th>Status</th>
   </tr>
   <tr>
     <td>1</td>
-    <td><b>Animal Trespass Detection</b></td>
+    <td><b>Enhanced Wild Animal Intrusion Detection using Faster R-CNN with Debiasing Technique</b></td>
     <td>IEEE ISED 2025 — NIT Raipur</td>
-    <td>Faster R-CNN</td>
+    <td>Faster R-CNN + ResNet-50 + FPN</td>
+    <td>mAP 0.797 · IoU 98.12% · F1 0.824</td>
     <td>✅ Published</td>
   </tr>
   <tr>
     <td>2</td>
-    <td><b>Queen Bee Detection</b></td>
+    <td><b>Computer Vision-based Recognition of Queen Bees in Colonies Using Faster R-CNN</b></td>
     <td>ICRAI 2025 — Springer</td>
     <td>Faster R-CNN + ResNet-50</td>
+    <td>Precision 89% · Recall 81% · F1 0.87</td>
     <td>✅ Accepted</td>
   </tr>
 </table>
@@ -75,7 +81,7 @@ class SanthoshKumar:
 <summary><b>🐟 MarineRAG-LLM — Underwater Fish Detection + RAG System</b></summary>
 <br>
 
-> End-to-end pipeline combining real-time fish detection with an LLM-powered Q&A system for marine biodiversity intelligence.
+> End-to-end pipeline combining real-time YOLOv8 fish detection with an LLM-powered Q&A system for marine biodiversity intelligence.
 
 | Component | Details |
 |---|---|
@@ -88,34 +94,38 @@ class SanthoshKumar:
 </details>
 
 <details>
-<summary><b>🪸 Coral Reef Health Monitoring — Semantic Segmentation</b></summary>
+<summary><b>🐝 Computer Vision-based Recognition of Queen Bees in Colonies — ICRAI 2025 (Springer)</b></summary>
 <br>
 
-> Fine-tuned SegFormer-B2 on CoralScapes for per-pixel reef health classification.
+> Automated queen bee detection in natural hive imagery using Faster R-CNN, addressing the challenge of locating a single queen among dense worker bee clusters.
 
 | Component | Details |
 |---|---|
-| **Model** | SegFormer-B2 (HuggingFace Transformers) |
-| **Dataset** | CoralScapes — 5 classes: background, live coral, bleached coral, dead coral, algae |
-| **Hardware** | Kaggle dual T4 GPUs |
-| **Best mIoU** | ~0.6387 |
-| **Key Fix** | Running confusion matrix via `torch.bincount` to prevent OOM |
+| **Model** | Faster R-CNN + ResNet-50 backbone + FPN |
+| **Dataset** | Real-time hive images/video frames; annotated via Roboflow (label: `Qbee`) |
+| **Augmentation** | Horizontal flip, saturation shift (±25%), 90° rotation |
+| **Training** | 25 epochs, SGD optimizer, decaying LR schedule, GPU-accelerated |
+| **Precision** | 89% · Recall 81% · F1 0.87 · Avg IoU 0.89 |
+| **vs. YOLO** | Outperformed YOLOv5 (F1 0.80), YOLOv8 (F1 0.77), YOLOv11 (F1 0.84) |
+| **Deployment** | Android Progressive Web App via Gradio + `fasterrcnn_epoch8.pth` |
 
 </details>
 
 <details>
-<summary><b>🐝 Queen Bee Detection — Faster R-CNN + ResNet-50</b></summary>
+<summary><b>🐘 Enhanced Wild Animal Intrusion Detection using Faster R-CNN — IEEE ISED 2025</b></summary>
 <br>
 
-> Object detection system for automated queen bee localization in hive imagery. Accepted at ICRAI 2025 (Springer).
+> Day-night adaptive animal trespass detection system for agricultural and residential perimeter security, using a debiased dataset and two-stage Faster R-CNN architecture.
 
-</details>
-
-<details>
-<summary><b>🐘 Animal Intrusion Detection — Faster R-CNN</b></summary>
-<br>
-
-> Real-time trespass detection system for crop and perimeter protection using region-proposal networks. Published at IEEE ISED 2025.
+| Component | Details |
+|---|---|
+| **Model** | Faster R-CNN + ResNet-50 + FPN (two-stage detector) |
+| **Dataset** | 13-class custom day + night dataset; debiased via Albumentations |
+| **Debiasing** | Horizontal flip, random brightness/contrast, rotation, Gaussian noise |
+| **Hardware** | Intel Core i5-10300H · 16GB RAM · NVIDIA GTX 1650 |
+| **mAP** | 0.797 · Avg IoU 98.12% · Precision 79.7% · Recall 86.2% · F1 0.824 |
+| **vs. YOLO** | Surpassed YOLOv5 (mAP 0.641), YOLOv7, YOLOv8 (mAP 0.640) on same dataset |
+| **Key Feature** | Dual day-night training enables adaptation to varying illumination without retraining |
 
 </details>
 
@@ -154,12 +164,12 @@ class SanthoshKumar:
 ## 📊 GitHub Stats
 
 <div align="center">
-  <img height="170" src="https://github-readme-stats.vercel.app/api?username=santhoshkumarrr&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
-  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=santhoshkumarrr&layout=compact&theme=tokyonight&hide_border=true" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api?username=santhosh-kumar2305&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" />
+  <img height="170" src="https://github-readme-stats.vercel.app/api/top-langs/?username=santhosh-kumar2305&layout=compact&theme=tokyonight&hide_border=true" />
 </div>
 
 <div align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=santhoshkumarrr&theme=tokyonight&hide_border=true" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=santhosh-kumar2305&theme=tokyonight&hide_border=true" />
 </div>
 
 ---
@@ -167,7 +177,7 @@ class SanthoshKumar:
 ## 📈 Activity Graph
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=santhoshkumarrr&theme=tokyo-night&hide_border=true&area=true" width="95%"/>
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=santhosh-kumar2305&theme=tokyo-night&hide_border=true&area=true" width="95%"/>
 </div>
 
 ---
@@ -178,7 +188,6 @@ class SanthoshKumar:
 📦 LLMs & Prompt Engineering    ████████████░░░░   75%
 🔍 RAG & Vector Databases       ██████████░░░░░░   63%
 ⚙️  MLOps & Model Deployment    ████████░░░░░░░░   50%
-🤖 Reinforcement Learning       ██████░░░░░░░░░░   38%
 ```
 
 ---
